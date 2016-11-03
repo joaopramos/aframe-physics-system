@@ -139,7 +139,7 @@ module.exports = {
   update: function (previousData) {
     var data = this.data;
 
-    if (data.debug !== previousData.debug) {
+    if (previousData && data.debug !== previousData.debug) {
       console.warn('[physics] `debug` cannot be changed dynamically.');
     }
 
